@@ -1,3 +1,7 @@
+[![CI](https://github.com/seaworld008/codex-ops-inspector/actions/workflows/ci.yml/badge.svg)](https://github.com/seaworld008/codex-ops-inspector/actions/workflows/ci.yml)
+[![License](https://img.shields.io/github/license/seaworld008/codex-ops-inspector)](./LICENSE)
+[![Node](https://img.shields.io/badge/node-24.x-339933?logo=node.js&logoColor=white)](https://nodejs.org/)
+
 # Codex Ops Inspector
 
 一个面向生产环境的 `Node.js 24 + Codex CLI` 巡检镜像方案，用于通过 `CronJob` 或手工触发的方式，对 Linux 主机和 Kubernetes 集群做标准化巡检，并输出中文报告。
@@ -268,8 +272,11 @@ docker run --rm \
 参考以下文件：
 
 - [`k8s/cronjob-linux-inspection.yaml`](./k8s/cronjob-linux-inspection.yaml)
+- [`k8s/cronjob-composite-inspection.yaml`](./k8s/cronjob-composite-inspection.yaml)
 - [`k8s/configmap-runtime-env.yaml`](./k8s/configmap-runtime-env.yaml)
+- [`k8s/configmap-runtime-composite.yaml`](./k8s/configmap-runtime-composite.yaml)
 - [`k8s/secret-openai-compatible.example.yaml`](./k8s/secret-openai-compatible.example.yaml)
+- [`k8s/secret-kubeconfig.example.yaml`](./k8s/secret-kubeconfig.example.yaml)
 
 ## 默认技能
 
@@ -293,3 +300,7 @@ docker run --rm \
 - 真实网关域名
 
 请通过环境变量、Secret 或挂载文件注入你自己的配置。
+
+## License
+
+本项目采用 [Apache-2.0](./LICENSE) 许可证。

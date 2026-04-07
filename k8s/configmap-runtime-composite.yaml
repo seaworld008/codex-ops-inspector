@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: codex-inspector-runtime-composite
+data:
+  AUTH_MODE: "auto"
+  INSPECTION_TARGET: "composite"
+  INSPECT_MODE: "quick"
+  INSPECT_DOCX: "true"
+  CODEX_MODEL: "gpt-5.4"
+  CODEX_BASE_URL: "https://your-openai-compatible-endpoint.example.com"
+
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: codex-inspector-runtime-composite-file
+data:
+  runtime.env: |
+    AUTH_MODE=auto
+    INSPECTION_TARGET=composite
+    INSPECT_MODE=quick
+    INSPECT_RETENTION_RUNS=20
+    INSPECT_DOCX=true
+    CODEX_MODEL=gpt-5.4
+    CODEX_BASE_URL=https://your-openai-compatible-endpoint.example.com
+    INSPECT_OUTPUT_DIR=/workspace/output
+
