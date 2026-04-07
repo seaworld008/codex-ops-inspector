@@ -100,9 +100,16 @@ k8s/
   secret-kubeconfig.example.yaml
 
 prompts/
+  README.md
   linux-inspection.prompt.md
   k8s-inspection.prompt.md
   composite-inspection.prompt.md
+
+skills/
+  README.md
+  ops-report-standardizer/
+    SKILL.md
+  ops-skill-bundle.md
 
 scripts/
   lib/
@@ -479,6 +486,13 @@ output/latest/
 - [`config/README.md`](./config/README.md)
 - [`config/runtime.env.example`](./config/runtime.env.example)
 - [`config/credentials/README.md`](./config/credentials/README.md)
+
+## 提示词与技能说明
+
+如果你后续要维护提示词或本地 skills，建议先看：
+
+- [`prompts/README.md`](./prompts/README.md)
+- [`skills/README.md`](./skills/README.md)
 
 ## 幂等性
 
