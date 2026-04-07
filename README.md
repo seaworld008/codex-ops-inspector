@@ -86,6 +86,7 @@ config/
     ssh.env.example
 
 k8s/
+  README.md
   cronjob-linux-inspection.yaml
   cronjob-composite-inspection.yaml
   configmap-runtime-env.yaml
@@ -304,8 +305,13 @@ docker run --rm \
 
 #### Kubernetes CronJob 运行
 
+建议先看：
+
+- [`k8s/README.md`](./k8s/README.md)
+
 参考以下文件：
 
+- [`k8s/README.md`](./k8s/README.md)
 - [`k8s/cronjob-linux-inspection.yaml`](./k8s/cronjob-linux-inspection.yaml)
 - [`k8s/cronjob-composite-inspection.yaml`](./k8s/cronjob-composite-inspection.yaml)
 - [`k8s/configmap-runtime-env.yaml`](./k8s/configmap-runtime-env.yaml)
@@ -411,6 +417,7 @@ kubectl apply -f k8s/cronjob-composite-inspection.yaml
 
 - 示例里的 Secret 内容需要替换成你的真实值
 - `example.yaml` 只是模板，不能直接用于生产
+- 如果你不确定该选哪套，先读 [`k8s/README.md`](./k8s/README.md)
 
 ## 输出结果如何查看
 
