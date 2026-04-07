@@ -1,0 +1,8 @@
+node_modules/
+output/
+output-test/
+reports/
+reports-run/
+.env
+.DS_Store
+

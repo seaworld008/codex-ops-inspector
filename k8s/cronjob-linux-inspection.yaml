@@ -1,0 +1,40 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: codex-linux-inspection
+spec:
+  schedule: "0 */6 * * *"
+  successfulJobsHistoryLimit: 3
+  failedJobsHistoryLimit: 3
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          restartPolicy: Never
+          containers:
+            - name: codex-inspector
+              image: your-registry/codex-ops-inspector:latest
+              imagePullPolicy: IfNotPresent
+              env:
+                - name: OPENAI_API_KEY
+                  valueFrom:
+                    secretKeyRef:
+                      name: codex-openai-compatible
+                      key: OPENAI_API_KEY
+              envFrom:
+                - configMapRef:
+                    name: codex-inspector-runtime
+              volumeMounts:
+                - name: runtime-config
+                  mountPath: /workspace/config/runtime.env
+                  subPath: runtime.env
+                  readOnly: true
+                - name: output
+                  mountPath: /workspace/output
+          volumes:
+            - name: runtime-config
+              configMap:
+                name: codex-inspector-runtime-file
+            - name: output
+              emptyDir: {}
+

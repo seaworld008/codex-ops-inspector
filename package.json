@@ -1,0 +1,14 @@
+{
+  "name": "codex-ops-inspector",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Codex runtime assets for scheduled Linux and Kubernetes inspection jobs",
+  "scripts": {
+    "report:docx": "node scripts/generate-docx-report.mjs"
+  },
+  "dependencies": {
+    "docx": "^9.6.1"
+  }
+}
+
