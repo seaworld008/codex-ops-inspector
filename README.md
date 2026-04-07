@@ -1,6 +1,11 @@
 [![CI](https://github.com/seaworld008/codex-ops-inspector/actions/workflows/ci.yml/badge.svg)](https://github.com/seaworld008/codex-ops-inspector/actions/workflows/ci.yml)
 [![License](https://img.shields.io/github/license/seaworld008/codex-ops-inspector)](./LICENSE)
+[![Codex](https://img.shields.io/badge/Codex-Ready-111111)](https://github.com/seaworld008/codex-ops-inspector)
+[![Automation](https://img.shields.io/badge/Automation-CronJob-0F766E)](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/)
+[![Kubernetes](https://img.shields.io/badge/Kubernetes-Supported-326CE5?logo=kubernetes&logoColor=white)](https://kubernetes.io/)
+[![Bash](https://img.shields.io/badge/Bash-Scripts-121011?logo=gnubash&logoColor=white)](https://www.gnu.org/software/bash/)
 [![Node](https://img.shields.io/badge/node-24.x-339933?logo=node.js&logoColor=white)](https://nodejs.org/)
+[![Last Commit](https://img.shields.io/github/last-commit/seaworld008/codex-ops-inspector)](https://github.com/seaworld008/codex-ops-inspector/commits/main)
 
 # Codex Ops Inspector
 
