@@ -112,6 +112,7 @@ skills/
   ops-skill-bundle.md
 
 scripts/
+  README.md
   lib/
     log.sh
     common.sh
@@ -493,6 +494,12 @@ output/latest/
 
 - [`prompts/README.md`](./prompts/README.md)
 - [`skills/README.md`](./skills/README.md)
+
+## 脚本执行说明
+
+如果你后续要维护执行流程、排障或理解脚本之间的调用关系，建议先看：
+
+- [`scripts/README.md`](./scripts/README.md)
 
 ## 幂等性
 
